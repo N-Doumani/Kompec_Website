@@ -4,19 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KOMPEC | للبرمجيات وصيانة الكمبيوتر</title>
-    <!-- استدعاء مكتبة Tailwind CSS للتصميم الاحترافي -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
-                        // دمج الرمادي الغامق الخاص بك مع ألوان النيون التكنولوجية
-                        compBaseBg: '#121214',      // رمادي داكن فخم جداً للخلفية
-                        compObjCard: '#1a1a1e',    // رمادي الهوية الخاص بكم للبطاقات والعناصر
-                        compLightGray: '#e5e7eb',   // الرمادي الفاتح للشعار والنصوص الثانوية
-                        compNeonBlue: '#2563eb',    // أزرق نيون مضيء ومحترف
-                        compCyberCyan: '#06b6d4',   // لون سيان تكنولوجي للمسات الحيوية
+                        compBaseBg: '#121214',
+                        compObjCard: '#1a1a1e',
+                        compLightGray: '#e5e7eb',
+                        compNeonBlue: '#2563eb',
+                        compCyberCyan: '#06b6d4',
                     }
                 }
             }
@@ -25,29 +23,36 @@
 </head>
 <body class="bg-compBaseBg text-gray-300 font-sans antialiased selection:bg-compNeonBlue selection:text-white">
 
-    <!-- 1. الهيدر (Header) -->
-    <header class="sticky top-0 z-50 bg-compBaseBg/80 backdrop-blur-md border-b border-gray-800/60">
+    <header class="sticky top-0 z-50 bg-[#121214]/80 backdrop-blur-md border-b border-gray-800/60">
         <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <!-- الشعار والاسم متناسق مع لافتة الألكوبوند مع توهج أزرق لطيف -->
-            <div class="flex items-center space-x-3 space-x-reverse group">
-                <div class="w-10 h-10 rounded-full border-2 border-compNeonBlue flex items-center justify-center font-bold text-white text-lg tracking-wider shadow-[0_0_15px_rgba(37,99,235,0.3)] transition-all duration-300 group-hover:border-compCyberCyan">
-                    KP
-                </div>
-                <span class="text-xl font-black tracking-widest text-white mr-2 bg-clip-text text-transparent bg-gradient-to-r from-white to-compLightGray">KOMPEC</span>
-            </div>
-            <!-- قائمة التنقل -->
-            <nav class="hidden md:flex space-x-8 space-x-reverse text-sm font-medium">
-                <a href="#hero" class="text-gray-400 hover:text-white transition-colors">الرئيسية</a>
-                <a href="#services" class="text-gray-400 hover:text-white transition-colors">خدماتنا</a>
-                <a href="#why-us" class="text-gray-400 hover:text-white transition-colors">لماذا نحن؟</a>
-                <a href="#contact" class="text-gray-400 hover:text-white transition-colors">تواصل معنا</a>
+            
+            <a href="index.html" class="flex items-center space-x-3 space-x-reverse group">
+                <img src="images/logo.png" alt="KOMPEC Logo" class="w-10 h-10 object-contain shadow-[0_0_15px_rgba(37,99,235,0.3)] transition-all duration-300 group-hover:scale-105">
+                <span class="text-xl font-black tracking-widest text-white mr-2 bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-300">
+                    KOMPEC
+                </span>
+            </a>
+
+            <nav class="hidden md:flex items-center space-x-8 space-x-reverse text-sm font-medium">
+                <a href="index.html" class="text-white border-b-2 border-[#2563eb] pb-1 font-bold tracking-wide">الرئيسية</a>
+                <a href="#services" class="text-gray-400 hover:text-white transition-colors duration-200">خدمات الصيانة</a>
+                <a href="products.html" class="text-gray-400 hover:text-white transition-colors duration-200">منتجاتنا</a>
+                <a href="#why-us" class="text-gray-400 hover:text-white transition-colors duration-200">لماذا نحن؟</a>
+                
+                <a href="#contact" class="bg-[#1a1a1e] border border-gray-700 hover:border-[#2563eb] text-white px-4 py-2 rounded-xl transition-all duration-300 text-xs font-bold shadow-md">
+                    تواصل معنا
+                </a>
             </nav>
+
+            <div class="md:hidden">
+                <a href="products.html" class="text-xs bg-[#2563eb] text-white px-3 py-2 rounded-lg font-bold">
+                    المنتجات 🖱
+                </a>
+            </div>
         </div>
     </header>
 
-    <!-- 2. القسم الرئيسي (Hero Section) -->
     <section id="hero" class="relative min-h-[85vh] flex items-center justify-center px-6 overflow-hidden">
-        <!-- تأثير خلفية مضيئة غامرة لجعل التصميم حيوياً -->
         <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-compNeonBlue/10 rounded-full blur-[120px]"></div>
         <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-compCyberCyan/10 rounded-full blur-[120px]"></div>
 
@@ -65,14 +70,13 @@
                 <a href="#contact" class="bg-gradient-to-r from-compNeonBlue to-blue-600 hover:from-blue-600 hover:to-compNeonBlue text-white font-bold px-8 py-4 rounded-xl shadow-lg shadow-blue-500/20 transition-all transform hover:-translate-y-0.5 text-center">
                     ابدأ مشروعك معنا
                 </a>
-                <a href="#services" class="bg-compObjCard/80 border border-gray-700/80 hover:border-gray-500 text-white font-semibold px-8 py-4 rounded-xl transition-all text-center backdrop-blur-sm">
-                    استكشف خدماتنا
+                <a href="products.html" class="bg-compObjCard/80 border border-gray-700/80 hover:border-gray-500 text-white font-semibold px-8 py-4 rounded-xl transition-all text-center backdrop-blur-sm">
+                    استكشف منتجاتنا
                 </a>
             </div>
         </div>
     </section>
 
-    <!-- 3. قسم الخدمات (Services Section) -->
     <section id="services" class="py-20 bg-compBaseBg px-6 relative z-10 border-t border-gray-900">
         <div class="container mx-auto max-w-6xl">
             <div class="text-center mb-16">
@@ -81,7 +85,6 @@
             </div>
             
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <!-- بطاقة صيانة الكمبيوتر -->
                 <div class="bg-compObjCard p-8 rounded-2xl border border-gray-800/80 hover:border-compNeonBlue/50 transition-all duration-300 group hover:shadow-[0_10px_30px_rgba(37,99,235,0.05)]">
                     <div class="w-12 h-12 bg-compNeonBlue/10 rounded-xl flex items-center justify-center text-compNeonBlue mb-6 group-hover:bg-compNeonBlue group-hover:text-white transition-all duration-300">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
@@ -94,7 +97,6 @@
                     </p>
                 </div>
 
-                <!-- بطاقة بيع الإكسسوارات -->
                 <div class="bg-compObjCard p-8 rounded-2xl border border-gray-800/80 hover:border-compCyberCyan/50 transition-all duration-300 group hover:shadow-[0_10px_30px_rgba(6,182,212,0.05)]">
                     <div class="w-12 h-12 bg-compCyberCyan/10 rounded-xl flex items-center justify-center text-compCyberCyan mb-6 group-hover:bg-compCyberCyan group-hover:text-white transition-all duration-300">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
@@ -107,11 +109,10 @@
                     </p>
                 </div>
 
-                <!-- بطاقة تصميم المواقع -->
                 <div class="bg-gradient-to-b from-compObjCard to-gray-900/40 p-8 rounded-2xl border-2 border-compNeonBlue hover:border-compCyberCyan transition-all duration-300 shadow-xl shadow-blue-500/5 group relative overflow-hidden">
                     <span class="absolute top-0 left-0 bg-gradient-to-r from-compNeonBlue to-compCyberCyan text-white text-[10px] font-bold tracking-widest px-3 py-1 rounded-br-lg">متميز</span>
                     <div class="w-12 h-12 bg-gradient-to-r from-compNeonBlue to-compCyberCyan text-white rounded-xl flex items-center justify-center mb-6 shadow-md shadow-blue-500/20">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <svg xmlns="http://www.w3.org/2000/xl" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
                         </svg>
                     </div>
@@ -124,7 +125,6 @@
         </div>
     </section>
 
-    <!-- 4. قسم لماذا نحن (Why Us) -->
     <section id="why-us" class="py-20 bg-gray-900/30 px-6 border-t border-gray-900 relative overflow-hidden">
         <div class="container mx-auto max-w-5xl relative z-10">
             <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
@@ -144,13 +144,12 @@
                         </li>
                         <li class="flex items-center">
                             <span class="text-compCyberCyan ml-3 font-bold text-lg">✦</span>
-                            <span class="text-gray-300">احترام خصوصية الزبائن وضمان سرية البيانات المشخصة والمسترجعة.</span>
+                            <span class="text-gray-300">احترام خصوصية الزبائن وضمان سرية البيانات.</span>
                         </li>
                     </ul>
                 </div>
                 
                 <div class="bg-gradient-to-br from-compObjCard to-gray-900 p-8 rounded-2xl border border-gray-800 text-center shadow-2xl relative group overflow-hidden">
-                    <div class="absolute -top-10 -left-10 w-32 h-32 bg-compNeonBlue/5 rounded-full blur-2xl group-hover:bg-compNeonBlue/10 transition-all"></div>
                     <div class="text-5xl font-black bg-clip-text text-transparent bg-gradient-to-r from-compNeonBlue to-compCyberCyan mb-2">100%</div>
                     <div class="text-white font-bold mb-2">حلول مدعومة بالأسس الهندسية</div>
                     <div class="text-gray-450 text-xs leading-relaxed">كل صيانة وكل سطر برميجي يخرج من مركزنا يتم فحصه واختباره لضمان أعلى أداء وكفاءة.</div>
@@ -159,14 +158,12 @@
         </div>
     </section>
 
-    <!-- 5. قسم اتصل بنا (Contact Section) -->
     <section id="contact" class="py-20 bg-compBaseBg px-6 border-t border-gray-900">
         <div class="container mx-auto max-w-3xl text-center">
             <h2 class="text-3xl font-bold text-white mb-4">هل أنت جاهز لتطوير تواجدك الرقمي؟</h2>
-            <p class="text-gray-400 mb-8">اضغط على الزر أدناه لتتواصل معنا مباشرة عبر الواتساب ومناقشة مشروعك القادم أو حجز موعد صيانة لجهازك.</p>
+            <p class="text-gray-400 mb-8">اضغط على الزر أدناه لتتواصل معنا مباشرة عبر الواتساب ومناقشة مشروعك القادم أو حجز موعد صيانة לגهازك.</p>
             
-            <!-- زر واتساب حيوي ومضيء متناسق مع النيون -->
-            <a href="https://wa.me/963991856359" target="_blank" class="inline-flex items-center space-x-3 space-x-reverse bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-500 hover:to-teal-500 text-white font-bold px-8 py-4 rounded-xl shadow-lg shadow-emerald-900/30 transition-all transform hover:-translate-y-0.5 hover:scale-[1.02]">
+            <a href="https://wa.me/963991856359" target="_blank" class="inline-flex items-center space-x-3 space-x-reverse bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-500 hover:to-teal-500 text-white font-bold px-8 py-4 rounded-xl shadow-lg transition transform hover:-translate-y-0.5">
                 <svg class="h-6 w-6 fill-current" viewBox="0 0 24 24">
                     <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.513 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.713-1.457L0 24zm6.59-4.846c1.6.95 3.498 1.451 5.438 1.453 5.494 0 9.961-4.47 9.964-9.97.002-2.665-1.026-5.17-2.894-7.04-1.869-1.87-4.357-2.9-7.027-2.91-5.498 0-9.964 4.471-9.967 9.97-.001 1.914.499 3.789 1.447 5.41l-.995 3.637 3.734-.98z"/>
                 </svg>
@@ -175,7 +172,6 @@
         </div>
     </section>
 
-    <!-- 6. الفوتير (Footer) -->
     <footer class="bg-black/40 py-8 text-center text-gray-600 text-xs border-t border-gray-900/60">
         <p>© 2026 KOMPEC. جميع الحقوق محفوظة.</p>
     </footer>
