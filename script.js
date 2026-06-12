@@ -36,3 +36,38 @@ const observer = new IntersectionObserver((entries) => {
 // البحث عن جميع العناصر التي تحمل كلاس reveal ومراقبتها
 const hiddenElements = document.querySelectorAll('.reveal');
 hiddenElements.forEach((el) => observer.observe(el));
+// 3. التحكم بقائمة الموبايل (Hamburger Menu)
+const menuBtn = document.getElementById('menu-btn');
+const mobileMenu = document.getElementById('mobile-menu');
+const menuIcon = document.getElementById('menu-icon');
+const mobileBtnToggle = document.getElementById('theme-toggle-mobile');
+
+// فتح وإغلاق القائمة عند الضغط على زر البرجر
+if (menuBtn && mobileMenu) {
+    menuBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+        // تغيير شكل الأيقونة بين (☰) و (✕) عند الفتح والإغلاق
+        menuIcon.classList.toggle('fa-bars');
+        menuIcon.classList.toggle('fa-times');
+    });
+}
+
+// إغلاق القائمة تلقائياً عند الضغط على أي رابط داخلي للانتقال
+document.querySelectorAll('.mobile-nav-link').forEach(link => {
+    link.addEventListener('click', () => {
+        if (mobileMenu) {
+            mobileMenu.classList.add('hidden');
+            if (menuIcon) {
+                menuIcon.classList.add('fa-bars');
+                menuIcon.classList.remove('fa-times');
+            }
+        }
+    });
+});
+
+// ربط زر التبديل الخاص بالموبايل بنفس وظيفة الزر الرئيسي
+if (mobileBtnToggle) {
+    mobileBtnToggle.addEventListener('click', () => {
+        if (toggleBtn) toggleBtn.click(); // يستدعي ضغطة الزر الأصلي لتغيير الوضع
+    });
+}

@@ -12,35 +12,49 @@
 
     <!-- 1. الهيدر (القائمة الكاملة) -->
     <header class="sticky top-0 z-50 custom-bg/90 backdrop-blur-md border-b custom-border transition-colors duration-300">
-        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center relative">
+            
             <a href="index.html" class="flex items-center space-x-3 space-x-reverse">
                 <img src="images/logo.png" alt="KOMPEC Logo" class="w-10 h-10 object-contain shadow-[0_0_15px_rgba(37,99,235,0.3)]">
-                <span class="text-xl font-black tracking-widest mr-2 custom-text bg-clip-text">KOMPEC</span>
+                <span class="text-xl font-black tracking-widest mr-2 custom-text">KOMPEC</span>
             </a>
             
             <nav class="hidden md:flex items-center space-x-8 space-x-reverse text-sm font-medium">
                 <a href="#hero" class="custom-text border-b-2 border-[#2563eb] pb-1 font-bold">الرئيسية</a>
-                <a href="#services" class="custom-muted hover:text-[#2563eb] transition-colors duration-200">خدمات الصيانة</a>
-                <a href="products.html" class="custom-muted hover:text-[#2563eb] transition-colors duration-200">منتجاتنا</a>
-                <a href="#why-us" class="custom-muted hover:text-[#2563eb] transition-colors duration-200">لماذا نحن؟</a>
+                <a href="#services" class="custom-muted hover:text-[#2563eb] transition-colors">خدمات الصيانة</a>
+                <a href="products.html" class="custom-muted hover:text-[#2563eb] transition-colors">منتجاتنا</a>
+                <a href="#why-us" class="custom-muted hover:text-[#2563eb] transition-colors">لماذا نحن؟</a>
                 
                 <button id="theme-toggle" class="p-2 rounded-xl bg-gray-800 text-yellow-400 hover:bg-gray-700 transition">
-                       <span id="theme-toggle-icon">☀️</span>
+                    <span>☀️</span>
                 </button>
-
-                <a href="index-en.html" class="p-2 rounded-xl bg-gray-800 text-white hover:bg-gray-700 transition font-bold text-xs flex items-center justify-center">
-                    EN
-                </a>
-                
-                <a href="#contact" class="custom-card border custom-border hover:border-[#2563eb] px-4 py-2 rounded-xl text-xs font-bold transition-all shadow-md">
-                    تواصل معنا
-                </a>
+                <a href="index-en.html" class="p-2 rounded-xl bg-gray-800 text-white text-xs font-bold">EN</a>
+                <a href="#contact" class="custom-card border custom-border px-4 py-2 rounded-xl text-xs font-bold">تواصل معنا</a>
             </nav>
+
+            <div class="flex items-center space-x-3 space-x-reverse md:hidden">
+                <button id="theme-toggle-mobile" class="p-2 rounded-xl bg-gray-800 text-yellow-400 text-xs">
+                    <span>☀️</span>
+                </button>
+                <button id="menu-btn" class="p-2 rounded-xl bg-gray-800 text-white focus:outline-none">
+                    <i class="fas fa-bars text-lg" id="menu-icon"></i>
+                </button>
+            </div>
+
+            <div id="mobile-menu" class="hidden absolute top-full left-0 w-full custom-card border-b custom-border flex flex-col p-6 space-y-4 text-center shadow-xl md:hidden transition-all">
+                <a href="#hero" class="mobile-nav-link block font-bold text-sm">الرئيسية</a>
+                <a href="#services" class="mobile-nav-link block font-bold text-sm custom-muted">خدمات الصيانة</a>
+                <a href="products.html" class="block font-bold text-sm custom-muted">منتجاتنا</a>
+                <a href="#why-us" class="mobile-nav-link block font-bold text-sm custom-muted">لماذا نحن؟</a>
+                <a href="index-en.html" class="block font-bold text-sm text-[#2563eb]">English (EN)</a>
+                <a href="#contact" class="mobile-nav-link bg-[#2563eb] text-white py-2.5 rounded-xl text-xs font-bold block">تواصل معنا</a>
+            </div>
+
         </div>
     </header>
 
     <!-- 2. القسم الرئيسي (Hero Section) -->
-    <section id="hero" class="relative min-h-[85vh] flex items-center justify-center px-6 overflow-hidden reveal">
+    <section id="hero" class="relative min-h-[85vh] flex items-center justify-center px-6 overflow-hidden">
         <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-[#2563eb]/10 rounded-full blur-[120px]"></div>
         <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-[#06b6d4]/10 rounded-full blur-[120px]"></div>
 
@@ -64,7 +78,7 @@
     </section>
 
     <!-- 3. قسم الخدمات (بالنصوص الأصلية الكاملة) -->
-    <section id="services" class="py-20 custom-bg px-6 border-t custom-border transition-colors duration-350 reveal">
+    <section id="services" class="py-20 custom-bg px-6 border-t custom-border transition-colors duration-300">
         <div class="container mx-auto max-w-6xl">
             <div class="text-center mb-16">
                 <h2 class="text-3xl font-bold mb-4 custom-text">خدماتنا الاحترافية</h2>
@@ -110,7 +124,7 @@
     </section>
 
     <!-- 4. قسم لماذا نحن (بالنصوص الأصلية الكاملة) -->
-    <section id="why-us" class="py-20 custom-bg px-6 border-t custom-border transition-colors duration-300 relative overflow-hidden reveal">
+    <section id="why-us" class="py-20 custom-bg px-6 border-t custom-border transition-colors duration-300 relative overflow-hidden">
         <div class="container mx-auto max-w-5xl relative z-10">
             <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
                 <div>
@@ -144,7 +158,7 @@
     </section>
 
         <!-- 5. قسم اتصل بنا -->
-    <section id="contact" class="py-20 custom-bg px-6 border-t custom-border transition-colors duration-300 reveal">
+    <section id="contact" class="py-20 custom-bg px-6 border-t custom-border transition-colors duration-300">
         <div class="container mx-auto max-w-5xl text-center">
             <h2 class="text-3xl font-bold mb-4 custom-text">تواصل معنا عبر منصاتنا الرقمية</h2>
             <p class="custom-muted mb-12 max-w-xl mx-auto">تواصل معنا مباشرة للاستفسار عن خدمات الصيانة البرمجية والعتادية، أو لمتابعة أحدث الإكسسوارات المتوفرة في مركزنا.</p>
