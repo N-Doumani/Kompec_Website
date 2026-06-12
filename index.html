@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KOMPEC | للبرمجيات وصيانة الكمبيوتر</title>
     <script src="https://cdn.tailwindcss.com"></script>
+        <!-- استدعاء مكتبة Font Awesome للأيقونات الرسمية -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script>
         tailwind.config = {
             theme: {
@@ -162,8 +164,8 @@
         </div>
     </section>
 
-        <!-- 5. قسم اتصل بنا المطوّر (Contact Section) -->
-    <section id="contact" class="py-20 bg-[#121214] px-6 border-t border-gray-800">
+            <!-- 5. قسم اتصل بنا المطوّر بالشعارات الرسمية -->
+    <section id="contact" class="py-20 bg-[#121214] px-6 border-t border-gray-800 transition-colors duration-300">
         <div class="container mx-auto max-w-5xl text-center">
             <h2 class="text-3xl font-bold text-white mb-4">تواصل معنا عبر منصاتنا الرقمية</h2>
             <p class="text-gray-400 mb-12 max-w-xl mx-auto">تواصل معنا مباشرة للاستفسار عن خدمات الصيانة البرمجية والعتادية، أو لمتابعة أحدث الإكسسوارات المتوفرة في مركزنا.</p>
@@ -172,49 +174,52 @@
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
                 
                 <!-- منصة واتساب -->
-                <div class="bg-[#1a1a1e] p-6 rounded-2xl border border-gray-850 flex flex-col items-center justify-between group hover:border-emerald-500 transition-all duration-300">
-                    <div class="mb-4">
-                        <span class="text-3xl">💬</span>
-                        <h3 class="font-bold text-white mt-2">واتساب (WhatsApp)</h3>
+                <div class="bg-[#1a1a1e] p-6 rounded-2xl border border-gray-800 flex flex-col items-center justify-between group hover:border-emerald-500 transition-all duration-300 shadow-lg">
+                    <div class="mb-4 flex flex-col items-center">
+                        <!-- أيقونة واتساب الرسمية -->
+                        <i class="fab fa-whatsapp text-4xl text-emerald-500 group-hover:scale-110 transition-transform duration-300"></i>
+                        <h3 class="font-bold text-white mt-3">واتساب (WhatsApp)</h3>
                         <a href="https://wa.me/963991856359" target="_blank" class="text-xs text-emerald-400 hover:underline block mt-1">0991856359</a>
                     </div>
                     <!-- الـ QR الخاص بالرابط -->
-                    <div class="w-32 h-32 bg-gray-900 rounded-xl p-2 mb-4 flex items-center justify-center">
+                    <div class="w-32 h-32 bg-gray-900 rounded-xl p-2 mb-4 flex items-center justify-center border border-gray-800">
                         <img src="images/qr-whatsapp.png" alt="WhatsApp QR" class="w-full h-full object-contain">
                     </div>
-                    <a href="https://wa.me/963991856359" target="_blank" class="w-full bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-bold py-2.5 px-4 rounded-xl transition">
+                    <a href="https://wa.me/963991856359" target="_blank" class="w-full bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-bold py-2.5 px-4 rounded-xl transition shadow-md shadow-emerald-900/20">
                         مراسلة فورية
                     </a>
                 </div>
 
                 <!-- منصة فيسبوك -->
-                <div class="bg-[#1a1a1e] p-6 rounded-2xl border border-gray-850 flex flex-col items-center justify-between group hover:border-blue-600 transition-all duration-300">
-                    <div class="mb-4">
-                        <span class="text-3xl">🔵</span>
-                        <h3 class="font-bold text-white mt-2">فيسبوك (Facebook)</h3>
+                <div class="bg-[#1a1a1e] p-6 rounded-2xl border border-gray-800 flex flex-col items-center justify-between group hover:border-blue-600 transition-all duration-300 shadow-lg">
+                    <div class="mb-4 flex flex-col items-center">
+                        <!-- أيقونة فيسبوك الرسمية -->
+                        <i class="fab fa-facebook text-4xl text-blue-500 group-hover:scale-110 transition-transform duration-300"></i>
+                        <h3 class="font-bold text-white mt-3">فيسبوك (Facebook)</h3>
                         <a href="https://facebook.com/YOUR_PAGE" target="_blank" class="text-xs text-blue-400 hover:underline block mt-1">صفحتنا الرسمية</a>
                     </div>
                     <!-- الـ QR الخاص بالرابط -->
-                    <div class="w-32 h-32 bg-gray-900 rounded-xl p-2 mb-4 flex items-center justify-center">
+                    <div class="w-32 h-32 bg-gray-900 rounded-xl p-2 mb-4 flex items-center justify-center border border-gray-800">
                         <img src="images/qr-facebook.png" alt="Facebook QR" class="w-full h-full object-contain">
                     </div>
-                    <a href="https://facebook.com/YOUR_PAGE" target="_blank" class="w-full bg-blue-600 hover:bg-blue-500 text-white text-xs font-bold py-2.5 px-4 rounded-xl transition">
+                    <a href="https://facebook.com/YOUR_PAGE" target="_blank" class="w-full bg-blue-600 hover:bg-blue-500 text-white text-xs font-bold py-2.5 px-4 rounded-xl transition shadow-md shadow-blue-900/20">
                         زيارة الصفحة
                     </a>
                 </div>
 
                 <!-- منصة إنستغرام -->
-                <div class="bg-[#1a1a1e] p-6 rounded-2xl border border-gray-850 flex flex-col items-center justify-between group hover:border-pink-500 transition-all duration-300">
-                    <div class="mb-4">
-                        <span class="text-3xl">📸</span>
-                        <h3 class="font-bold text-white mt-2">إنستغرام (Instagram)</h3>
+                <div class="bg-[#1a1a1e] p-6 rounded-2xl border border-gray-850 flex flex-col items-center justify-between group hover:border-pink-500 transition-all duration-300 shadow-lg">
+                    <div class="mb-4 flex flex-col items-center">
+                        <!-- أيقونة إنستغرام الرسمية بتدرج لوني لطيف -->
+                        <i class="fab fa-instagram text-4xl text-transparent bg-clip-text bg-gradient-to-tr from-yellow-500 via-pink-500 to-purple-500 group-hover:scale-110 transition-transform duration-300"></i>
+                        <h3 class="font-bold text-white mt-3">إنستغرام (Instagram)</h3>
                         <a href="https://instagram.com/YOUR_ACCOUNT" target="_blank" class="text-xs text-pink-400 hover:underline block mt-1">@KOMPEC_STORE</a>
                     </div>
                     <!-- الـ QR الخاص بالرابط -->
-                    <div class="w-32 h-32 bg-gray-900 rounded-xl p-2 mb-4 flex items-center justify-center">
+                    <div class="w-32 h-32 bg-gray-900 rounded-xl p-2 mb-4 flex items-center justify-center border border-gray-800">
                         <img src="images/qr-instagram.png" alt="Instagram QR" class="w-full h-full object-contain">
                     </div>
-                    <a href="https://instagram.com/YOUR_ACCOUNT" target="_blank" class="w-full bg-gradient-to-r from-pink-600 to-purple-600 hover:from-pink-500 hover:to-purple-500 text-white text-xs font-bold py-2.5 px-4 rounded-xl transition">
+                    <a href="https://instagram.com/YOUR_ACCOUNT" target="_blank" class="w-full bg-gradient-to-r from-pink-600 to-purple-600 hover:from-pink-500 hover:to-purple-500 text-white text-xs font-bold py-2.5 px-4 rounded-xl transition shadow-md shadow-pink-900/20">
                         متابعة الحساب
                     </a>
                 </div>
@@ -222,7 +227,6 @@
             </div>
         </div>
     </section>
-
     <footer class="bg-black/40 py-8 text-center text-gray-600 text-xs border-t border-gray-900/60">
         <p>© 2026 KOMPEC. جميع الحقوق محفوظة.</p>
     </footer>
