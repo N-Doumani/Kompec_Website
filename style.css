@@ -1,0 +1,24 @@
+/* الألوان الافتراضية للوضع الداكن (Dark Mode) */
+:root {
+    --bg-base: #121214;
+    --bg-card: #1a1a1e;
+    --text-main: #ffffff;
+    --text-muted: #9ca3af;
+    --border-color: #1f2937;
+}
+
+/* الألوان عند الانتقال للوضع الفاتح (Light Mode) */
+body.light {
+    --bg-base: #f9fafb;
+    --bg-card: #ffffff;
+    --text-main: #111827;
+    --text-muted: #4b5563;
+    --border-color: #e5e7eb;
+}
+
+/* تطبيق المتغيرات على كلاسات مخصصة سنستخدمها في الـ HTML */
+.custom-bg { background-color: var(--bg-base) !important; }
+.custom-card { background-color: var(--bg-card) !important; }
+.custom-text { color: var(--text-main) !important; }
+.custom-muted { color: var(--text-muted) !important; }
+.custom-border { border-color: var(--border-color) !important; }

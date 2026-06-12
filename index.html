@@ -5,125 +5,99 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KOMPEC | للبرمجيات وصيانة الكمبيوتر</title>
     <script src="https://cdn.tailwindcss.com"></script>
-        <!-- استدعاء مكتبة Font Awesome للأيقونات الرسمية -->
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        compBaseBg: '#121214',
-                        compObjCard: '#1a1a1e',
-                        compLightGray: '#e5e7eb',
-                        compNeonBlue: '#2563eb',
-                        compCyberCyan: '#06b6d4',
-                    }
-                }
-            }
-        }
-    </script>
 </head>
-<body class="bg-compBaseBg text-gray-300 font-sans antialiased selection:bg-compNeonBlue selection:text-white">
+<body class="custom-bg custom-text font-sans antialiased transition-colors duration-300">
 
-    <header class="sticky top-0 z-50 bg-[#121214]/80 backdrop-blur-md border-b border-gray-800/60">
+    <!-- 1. الهيدر (القائمة الكاملة) -->
+    <header class="sticky top-0 z-50 custom-bg/90 backdrop-blur-md border-b custom-border transition-colors duration-300">
         <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-            
-            <a href="index.html" class="flex items-center space-x-3 space-x-reverse group">
-                <img src="images/logo.png" alt="KOMPEC Logo" class="w-10 h-10 object-contain shadow-[0_0_15px_rgba(37,99,235,0.3)] transition-all duration-300 group-hover:scale-105">
-                <span class="text-xl font-black tracking-widest text-white mr-2 bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-300">
-                    KOMPEC
-                </span>
+            <a href="index.html" class="flex items-center space-x-3 space-x-reverse">
+                <img src="images/logo.png" alt="KOMPEC Logo" class="w-10 h-10 object-contain shadow-[0_0_15px_rgba(37,99,235,0.3)]">
+                <span class="text-xl font-black tracking-widest mr-2 custom-text bg-clip-text">KOMPEC</span>
             </a>
-
+            
             <nav class="hidden md:flex items-center space-x-8 space-x-reverse text-sm font-medium">
-                <a href="index.html" class="text-white border-b-2 border-[#2563eb] pb-1 font-bold tracking-wide">الرئيسية</a>
-                <a href="#services" class="text-gray-400 hover:text-white transition-colors duration-200">خدمات الصيانة</a>
-                <a href="products.html" class="text-gray-400 hover:text-white transition-colors duration-200">منتجاتنا</a>
-                <a href="#why-us" class="text-gray-400 hover:text-white transition-colors duration-200">لماذا نحن؟</a>
+                <a href="#hero" class="custom-text border-b-2 border-[#2563eb] pb-1 font-bold">الرئيسية</a>
+                <a href="#services" class="custom-muted hover:text-[#2563eb] transition-colors duration-200">خدمات الصيانة</a>
+                <a href="products.html" class="custom-muted hover:text-[#2563eb] transition-colors duration-200">منتجاتنا</a>
+                <a href="#why-us" class="custom-muted hover:text-[#2563eb] transition-colors duration-200">لماذا نحن؟</a>
                 
-                <a href="#contact" class="bg-[#1a1a1e] border border-gray-700 hover:border-[#2563eb] text-white px-4 py-2 rounded-xl transition-all duration-300 text-xs font-bold shadow-md">
+                <button id="theme-toggle" class="p-2 rounded-xl bg-gray-800 text-yellow-400 hover:bg-gray-700 transition">
+                    <span id="theme-toggle-icon">☀️</span>
+                </button>
+                
+                <a href="#contact" class="custom-card border custom-border hover:border-[#2563eb] px-4 py-2 rounded-xl text-xs font-bold transition-all shadow-md">
                     تواصل معنا
                 </a>
-                <!-- زر تبديل الوضع (ليلي / نهاري) -->
-                <button id="theme-toggle" class="p-2 rounded-xl bg-gray-800 text-yellow-400 hover:text-white transition">
-                <span id="theme-toggle-icon">☀️</span>
-                </button>
             </nav>
-
-            <div class="md:hidden">
-                <a href="products.html" class="text-xs bg-[#2563eb] text-white px-3 py-2 rounded-lg font-bold">
-                    المنتجات 🖱
-                </a>
-            </div>
         </div>
     </header>
 
+    <!-- 2. القسم الرئيسي (Hero Section) -->
     <section id="hero" class="relative min-h-[85vh] flex items-center justify-center px-6 overflow-hidden">
-        <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-compNeonBlue/10 rounded-full blur-[120px]"></div>
-        <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-compCyberCyan/10 rounded-full blur-[120px]"></div>
+        <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-[#2563eb]/10 rounded-full blur-[120px]"></div>
+        <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-[#06b6d4]/10 rounded-full blur-[120px]"></div>
 
         <div class="text-center max-w-3xl relative z-10">
-            <h1 class="text-4xl md:text-6xl font-extrabold text-white mb-6 leading-tight tracking-tight">
+            <h1 class="text-4xl md:text-6xl font-extrabold mb-6 leading-tight custom-text">
                 نأخذ أعمالك وأجهزتك إلى <br>
-                <span class="bg-clip-text text-transparent bg-gradient-to-r from-compNeonBlue to-compCyberCyan drop-shadow-[0_2px_10px_rgba(37,99,235,0.2)]">
-                    مستوى الاحتراف الرقمي
-                </span>
+                <span class="bg-clip-text text-transparent bg-gradient-to-r from-[#2563eb] to-[#06b6d4]">مستوى الاحتراف الرقمي</span>
             </h1>
-            <p class="text-gray-400 text-lg md:text-xl mb-10 leading-relaxed max-w-2xl mx-auto">
-                في <span class="text-white font-bold">KOMPEC</span>، نمزج بين دقة هندسة الصيانة العتادية وابتكار البرمجيات لنمنحك حلولاً تكنولوجية متكاملة وموثوقة.
+            <p class="custom-muted text-lg md:text-xl mb-10 leading-relaxed max-w-2xl mx-auto">
+                في <span class="font-bold custom-text">KOMPEC</span>، نمزج بين دقة هندسة الصيانة العتادية وابتكار البرمجيات لنمنحك حلولاً تكنولوجية متكاملة وموثوقة.
             </p>
             <div class="flex flex-col sm:flex-row justify-center gap-4">
-                <a href="#contact" class="bg-gradient-to-r from-compNeonBlue to-blue-600 hover:from-blue-600 hover:to-compNeonBlue text-white font-bold px-8 py-4 rounded-xl shadow-lg shadow-blue-500/20 transition-all transform hover:-translate-y-0.5 text-center">
+                <a href="#contact" class="bg-gradient-to-r from-[#2563eb] to-blue-600 text-white font-bold px-8 py-4 rounded-xl shadow-lg shadow-blue-500/20 transform hover:-translate-y-0.5 transition-all text-center">
                     ابدأ مشروعك معنا
                 </a>
-                <a href="products.html" class="bg-compObjCard/80 border border-gray-700/80 hover:border-gray-500 text-white font-semibold px-8 py-4 rounded-xl transition-all text-center backdrop-blur-sm">
+                <a href="products.html" class="custom-card border custom-border hover:border-gray-500 font-semibold px-8 py-4 rounded-xl transition-all text-center">
                     استكشف منتجاتنا
                 </a>
             </div>
         </div>
     </section>
 
-    <section id="services" class="py-20 bg-compBaseBg px-6 relative z-10 border-t border-gray-900">
+    <!-- 3. قسم الخدمات (بالنصوص الأصلية الكاملة) -->
+    <section id="services" class="py-20 custom-bg px-6 border-t custom-border transition-colors duration-300">
         <div class="container mx-auto max-w-6xl">
             <div class="text-center mb-16">
-                <h2 class="text-3xl font-bold text-white mb-4">خدماتنا الاحترافية</h2>
-                <div class="w-12 h-1 bg-gradient-to-r from-compNeonBlue to-compCyberCyan mx-auto rounded-full"></div>
+                <h2 class="text-3xl font-bold mb-4 custom-text">خدماتنا الاحترافية</h2>
+                <div class="w-12 h-1 bg-gradient-to-r from-[#2563eb] to-[#06b6d4] mx-auto rounded-full"></div>
             </div>
             
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="bg-compObjCard p-8 rounded-2xl border border-gray-800/80 hover:border-compNeonBlue/50 transition-all duration-300 group hover:shadow-[0_10px_30px_rgba(37,99,235,0.05)]">
-                    <div class="w-12 h-12 bg-compNeonBlue/10 rounded-xl flex items-center justify-center text-compNeonBlue mb-6 group-hover:bg-compNeonBlue group-hover:text-white transition-all duration-300">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M9 3v2m6-2v2M9 19v-2m6-2v2M5 9H3m2 6H3m14-6h2m-2 6h2M5 5a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2H5z" />
-                        </svg>
+                <!-- خدمة 1 -->
+                <div class="custom-card p-8 rounded-2xl border custom-border hover:border-[#2563eb]/50 transition-all duration-300 group">
+                    <div class="w-12 h-12 bg-[#2563eb]/10 rounded-xl flex items-center justify-center text-[#2563eb] mb-6 group-hover:bg-[#2563eb] group-hover:text-white transition-all">
+                        <i class="fas fa-tools text-xl"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-white mb-4">صيانة وتجهيز العتاد</h3>
-                    <p class="text-gray-400 leading-relaxed text-sm">
+                    <h3 class="text-xl font-bold mb-4 custom-text">صيانة وتجهيز العتاد</h3>
+                    <p class="custom-muted leading-relaxed text-sm">
                         تشخيص هندسي دقيق للابتوب والكمبيوتر، حلول التبريد الاحترافية، ترقية العتاد، وتجميع أجهزة الألعاب والأعمال بضمان حقيقي.
                     </p>
                 </div>
 
-                <div class="bg-compObjCard p-8 rounded-2xl border border-gray-800/80 hover:border-compCyberCyan/50 transition-all duration-300 group hover:shadow-[0_10px_30px_rgba(6,182,212,0.05)]">
-                    <div class="w-12 h-12 bg-compCyberCyan/10 rounded-xl flex items-center justify-center text-compCyberCyan mb-6 group-hover:bg-compCyberCyan group-hover:text-white transition-all duration-300">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
-                        </svg>
+                <!-- خدمة 2 -->
+                <div class="custom-card p-8 rounded-2xl border custom-border hover:border-[#06b6d4]/50 transition-all duration-300 group">
+                    <div class="w-12 h-12 bg-[#06b6d4]/10 rounded-xl flex items-center justify-center text-[#06b6d4] mb-6 group-hover:bg-[#06b6d4] group-hover:text-white transition-all">
+                        <i class="fas fa-shopping-bag text-xl"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-white mb-4">ملحقات وإكسسوارات رقمية</h3>
-                    <p class="text-gray-400 leading-relaxed text-sm">
+                    <h3 class="text-xl font-bold mb-4 custom-text">ملحقات وإكسسوارات رقمية</h3>
+                    <p class="custom-muted leading-relaxed text-sm">
                         توفير إكسسوارات حاسوب أصلية ومختبرة بعناية؛ من كابلات الشبكات المعتمدة، وحدات التخزين فائقة السرعة، وحتى أدوات الإنتاجية.
                     </p>
                 </div>
 
-                <div class="bg-gradient-to-b from-compObjCard to-gray-900/40 p-8 rounded-2xl border-2 border-compNeonBlue hover:border-compCyberCyan transition-all duration-300 shadow-xl shadow-blue-500/5 group relative overflow-hidden">
-                    <span class="absolute top-0 left-0 bg-gradient-to-r from-compNeonBlue to-compCyberCyan text-white text-[10px] font-bold tracking-widest px-3 py-1 rounded-br-lg">متميز</span>
-                    <div class="w-12 h-12 bg-gradient-to-r from-compNeonBlue to-compCyberCyan text-white rounded-xl flex items-center justify-center mb-6 shadow-md shadow-blue-500/20">
-                        <svg xmlns="http://www.w3.org/2000/xl" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
-                        </svg>
+                <!-- خدمة 3 -->
+                <div class="custom-card p-8 rounded-2xl border-2 border-[#2563eb] hover:border-[#06b6d4] transition-all duration-300 shadow-xl relative overflow-hidden group">
+                    <span class="absolute top-0 left-0 bg-gradient-to-r from-[#2563eb] to-[#06b6d4] text-white text-[10px] font-bold tracking-widest px-3 py-1 rounded-br-lg">متميز</span>
+                    <div class="w-12 h-12 bg-gradient-to-r from-[#2563eb] to-[#06b6d4] text-white rounded-xl flex items-center justify-center mb-6 shadow-md">
+                        <i class="fas fa-code text-xl"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-white mb-4">تطوير وتصميم الويب</h3>
-                    <p class="text-gray-400 leading-relaxed text-sm">
+                    <h3 class="text-xl font-bold mb-4 custom-text">تطوير وتصميم الويب</h3>
+                    <p class="custom-muted leading-relaxed text-sm">
                         نصمم ونبني مواقع ويب متجاوبة بالكامل، صفحات هبوط تسويقية جذابة، وأنظمة ويب متكاملة مبنية بأحدث معايير الأكواد العالمية.
                     </p>
                 </div>
@@ -131,58 +105,55 @@
         </div>
     </section>
 
-    <section id="why-us" class="py-20 bg-gray-900/30 px-6 border-t border-gray-900 relative overflow-hidden">
+    <!-- 4. قسم لماذا نحن (بالنصوص الأصلية الكاملة) -->
+    <section id="why-us" class="py-20 custom-bg px-6 border-t custom-border transition-colors duration-300 relative overflow-hidden">
         <div class="container mx-auto max-w-5xl relative z-10">
             <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
                 <div>
-                    <h2 class="text-3xl font-bold text-white mb-6">الخبرة الأكاديمية تلتقي بالتطبيق العملي</h2>
-                    <p class="text-gray-400 mb-8 leading-relaxed">
-                        في السوق الكثير من الهواة، ولكن في **KOMPEC** نطبق معايير علوم الحاسوب والمعلوماتية لضمان أمان بياناتك، وسرعة استجابة برمجياتك، والعمر الطويل لأجهزتك.
+                    <h2 class="text-3xl font-bold mb-6 custom-text">الخبرة الأكاديمية تلتقي بالتطبيق العملي</h2>
+                    <p class="custom-muted mb-8 leading-relaxed">
+                        في السوق الكثير من الهواة، ولكن في <span class="font-bold">KOMPEC</span> نطبق معايير علوم الحاسوب والمعلوماتية لضمان أمان بياناتك، وسرعة استجابة برمجياتك، والعمر الطويل لأجهزتك.
                     </p>
                     <ul class="space-y-4 text-sm">
                         <li class="flex items-center">
-                            <span class="text-compCyberCyan ml-3 font-bold text-lg">✦</span>
-                            <span class="text-gray-300">حلول برمجية متقدمة ولغات ويب متطورة وتفاعلية.</span>
+                            <span class="text-[#06b6d4] ml-3 font-bold text-lg">✦</span>
+                            <span class="custom-muted">حلول برمجية متقدمة ولغات ويب متطورة وتفاعلية.</span>
                         </li>
                         <li class="flex items-center">
-                            <span class="text-compNeonBlue ml-3 font-bold text-lg">✦</span>
-                            <span class="text-gray-300">مواقع متوافقة هندسياً مع الهواتف ومحركات البحث.</span>
+                            <span class="text-[#2563eb] ml-3 font-bold text-lg">✦</span>
+                            <span class="custom-muted">مواقع متوافقة هندسياً مع الهواتف ومحركات البحث.</span>
                         </li>
                         <li class="flex items-center">
-                            <span class="text-compCyberCyan ml-3 font-bold text-lg">✦</span>
-                            <span class="text-gray-300">احترام خصوصية الزبائن وضمان سرية البيانات.</span>
+                            <span class="text-[#06b6d4] ml-3 font-bold text-lg">✦</span>
+                            <span class="custom-muted">احترام خصوصية الزبائن وضمان سرية البيانات.</span>
                         </li>
                     </ul>
                 </div>
                 
-                <div class="bg-gradient-to-br from-compObjCard to-gray-900 p-8 rounded-2xl border border-gray-800 text-center shadow-2xl relative group overflow-hidden">
-                    <div class="text-5xl font-black bg-clip-text text-transparent bg-gradient-to-r from-compNeonBlue to-compCyberCyan mb-2">100%</div>
-                    <div class="text-white font-bold mb-2">حلول مدعومة بالأسس الهندسية</div>
-                    <div class="text-gray-450 text-xs leading-relaxed">كل صيانة وكل سطر برميجي يخرج من مركزنا يتم فحصه واختباره لضمان أعلى أداء وكفاءة.</div>
+                <div class="custom-card p-8 rounded-2xl border custom-border text-center shadow-2xl transition-colors duration-300">
+                    <div class="text-5xl font-black bg-clip-text text-transparent bg-gradient-to-r from-[#2563eb] to-[#06b6d4] mb-2">100%</div>
+                    <div class="font-bold mb-2 custom-text">حلول مدعومة بالأسس الهندسية</div>
+                    <div class="custom-muted text-xs leading-relaxed">كل صيانة وكل سطر برميجي يخرج من مركزنا يتم فحصه واختباره لضمان أعلى أداء وكفاءة.</div>
                 </div>
             </div>
         </div>
     </section>
 
-            <!-- 5. قسم اتصل بنا المطوّر بالشعارات الرسمية -->
-    <section id="contact" class="py-20 bg-[#121214] px-6 border-t border-gray-800 transition-colors duration-300">
+        <!-- 5. قسم اتصل بنا -->
+    <section id="contact" class="py-20 custom-bg px-6 border-t custom-border transition-colors duration-300">
         <div class="container mx-auto max-w-5xl text-center">
-            <h2 class="text-3xl font-bold text-white mb-4">تواصل معنا عبر منصاتنا الرقمية</h2>
-            <p class="text-gray-400 mb-12 max-w-xl mx-auto">تواصل معنا مباشرة للاستفسار عن خدمات الصيانة البرمجية والعتادية، أو لمتابعة أحدث الإكسسوارات المتوفرة في مركزنا.</p>
+            <h2 class="text-3xl font-bold mb-4 custom-text">تواصل معنا عبر منصاتنا الرقمية</h2>
+            <p class="custom-muted mb-12 max-w-xl mx-auto">تواصل معنا مباشرة للاستفسار عن خدمات الصيانة البرمجية والعتادية، أو لمتابعة أحدث الإكسسوارات المتوفرة في مركزنا.</p>
             
-            <!-- شبكة منصات التواصل الثلاثية -->
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
                 
-                <!-- منصة واتساب -->
-                <div class="bg-[#1a1a1e] p-6 rounded-2xl border border-gray-800 flex flex-col items-center justify-between group hover:border-emerald-500 transition-all duration-300 shadow-lg">
+                <div class="custom-card p-6 rounded-2xl border custom-border flex flex-col items-center justify-between group hover:border-emerald-500 hover:shadow-[0_0_25px_rgba(16,185,129,0.15)] transition-all duration-300">
                     <div class="mb-4 flex flex-col items-center">
-                        <!-- أيقونة واتساب الرسمية -->
                         <i class="fab fa-whatsapp text-4xl text-emerald-500 group-hover:scale-110 transition-transform duration-300"></i>
-                        <h3 class="font-bold text-white mt-3">واتساب (WhatsApp)</h3>
+                        <h3 class="font-bold mt-3 custom-text">واتساب (WhatsApp)</h3>
                         <a href="https://wa.me/963991856359" target="_blank" class="text-xs text-emerald-400 hover:underline block mt-1">0991856359</a>
                     </div>
-                    <!-- الـ QR الخاص بالرابط -->
-                    <div class="w-32 h-32 bg-gray-900 rounded-xl p-2 mb-4 flex items-center justify-center border border-gray-800">
+                    <div class="w-32 h-32 bg-gray-900 rounded-xl p-2 mb-4 flex items-center justify-center border custom-border">
                         <img src="images/qr-whatsapp.png" alt="WhatsApp QR" class="w-full h-full object-contain">
                     </div>
                     <a href="https://wa.me/963991856359" target="_blank" class="w-full bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-bold py-2.5 px-4 rounded-xl transition shadow-md shadow-emerald-900/20">
@@ -190,36 +161,30 @@
                     </a>
                 </div>
 
-                <!-- منصة فيسبوك -->
-                <div class="bg-[#1a1a1e] p-6 rounded-2xl border border-gray-800 flex flex-col items-center justify-between group hover:border-blue-600 transition-all duration-300 shadow-lg">
+                <div class="custom-card p-6 rounded-2xl border custom-border flex flex-col items-center justify-between group hover:border-blue-600 hover:shadow-[0_0_25px_rgba(37,99,235,0.15)] transition-all duration-300">
                     <div class="mb-4 flex flex-col items-center">
-                        <!-- أيقونة فيسبوك الرسمية -->
                         <i class="fab fa-facebook text-4xl text-blue-500 group-hover:scale-110 transition-transform duration-300"></i>
-                        <h3 class="font-bold text-white mt-3">فيسبوك (Facebook)</h3>
-                        <a href="https://facebook.com/YOUR_PAGE" target="_blank" class="text-xs text-blue-400 hover:underline block mt-1">صفحتنا الرسمية</a>
+                        <h3 class="font-bold mt-3 custom-text">فيسبوك (Facebook)</h3>
+                        <a href="#" target="_blank" class="text-xs text-blue-400 hover:underline block mt-1">صفحتنا الرسمية</a>
                     </div>
-                    <!-- الـ QR الخاص بالرابط -->
-                    <div class="w-32 h-32 bg-gray-900 rounded-xl p-2 mb-4 flex items-center justify-center border border-gray-800">
+                    <div class="w-32 h-32 bg-gray-900 rounded-xl p-2 mb-4 flex items-center justify-center border custom-border">
                         <img src="images/qr-facebook.png" alt="Facebook QR" class="w-full h-full object-contain">
                     </div>
-                    <a href="https://facebook.com/YOUR_PAGE" target="_blank" class="w-full bg-blue-600 hover:bg-blue-500 text-white text-xs font-bold py-2.5 px-4 rounded-xl transition shadow-md shadow-blue-900/20">
+                    <a href="#" target="_blank" class="w-full bg-blue-600 hover:bg-blue-500 text-white text-xs font-bold py-2.5 px-4 rounded-xl transition shadow-md shadow-blue-900/20">
                         زيارة الصفحة
                     </a>
                 </div>
 
-                <!-- منصة إنستغرام -->
-                <div class="bg-[#1a1a1e] p-6 rounded-2xl border border-gray-850 flex flex-col items-center justify-between group hover:border-pink-500 transition-all duration-300 shadow-lg">
+                <div class="custom-card p-6 rounded-2xl border custom-border flex flex-col items-center justify-between group hover:border-pink-500 hover:shadow-[0_0_25px_rgba(236,72,153,0.15)] transition-all duration-300">
                     <div class="mb-4 flex flex-col items-center">
-                        <!-- أيقونة إنستغرام الرسمية بتدرج لوني لطيف -->
                         <i class="fab fa-instagram text-4xl text-transparent bg-clip-text bg-gradient-to-tr from-yellow-500 via-pink-500 to-purple-500 group-hover:scale-110 transition-transform duration-300"></i>
-                        <h3 class="font-bold text-white mt-3">إنستغرام (Instagram)</h3>
-                        <a href="https://instagram.com/YOUR_ACCOUNT" target="_blank" class="text-xs text-pink-400 hover:underline block mt-1">@KOMPEC_STORE</a>
+                        <h3 class="font-bold mt-3 custom-text">إنستغرام (Instagram)</h3>
+                        <a href="#" target="_blank" class="text-xs text-pink-400 hover:underline block mt-1">@KOMPEC_STORE</a>
                     </div>
-                    <!-- الـ QR الخاص بالرابط -->
-                    <div class="w-32 h-32 bg-gray-900 rounded-xl p-2 mb-4 flex items-center justify-center border border-gray-800">
+                    <div class="w-32 h-32 bg-gray-900 rounded-xl p-2 mb-4 flex items-center justify-center border custom-border">
                         <img src="images/qr-instagram.png" alt="Instagram QR" class="w-full h-full object-contain">
                     </div>
-                    <a href="https://instagram.com/YOUR_ACCOUNT" target="_blank" class="w-full bg-gradient-to-r from-pink-600 to-purple-600 hover:from-pink-500 hover:to-purple-500 text-white text-xs font-bold py-2.5 px-4 rounded-xl transition shadow-md shadow-pink-900/20">
+                    <a href="#" target="_blank" class="w-full bg-gradient-to-r from-pink-600 to-purple-600 text-white text-xs font-bold py-2.5 px-4 rounded-xl transition shadow-md shadow-pink-900/20">
                         متابعة الحساب
                     </a>
                 </div>
@@ -227,28 +192,27 @@
             </div>
         </div>
     </section>
-    <footer class="bg-black/40 py-8 text-center text-gray-600 text-xs border-t border-gray-900/60">
-        <p>© 2026 KOMPEC. جميع الحقوق محفوظة.</p>
-    </footer>
+
+    <!-- سكربت التبديل -->
     <script>
         const toggleBtn = document.getElementById('theme-toggle');
         const toggleIcon = document.getElementById('theme-toggle-icon');
         
+        if (localStorage.getItem('theme') === 'light') {
+            document.body.classList.add('light');
+            toggleIcon.innerText = '🌙';
+        }
+
         toggleBtn.addEventListener('click', () => {
-            document.body.classList.toggle('bg-white');
-            document.body.classList.toggle('text-gray-900');
-            document.body.classList.toggle('bg-[#121214]');
-            document.body.classList.toggle('text-gray-300');
-            
-            if(document.body.classList.contains('bg-white')) {
+            document.body.classList.toggle('light');
+            if (document.body.classList.contains('light')) {
                 toggleIcon.innerText = '🌙';
-                toggleBtn.classList.replace('bg-gray-800', 'bg-gray-100');
+                localStorage.setItem('theme', 'light');
             } else {
                 toggleIcon.innerText = '☀️';
-                toggleBtn.classList.replace('bg-gray-100', 'bg-gray-800');
+                localStorage.setItem('theme', 'dark');
             }
         });
     </script>
-
 </body>
 </html>
