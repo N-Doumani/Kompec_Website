@@ -1,203 +1,192 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl" class="scroll-smooth">
+<html lang="en" dir="ltr" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KOMPEC | للبرمجيات وصيانة الكمبيوتر</title>
+    <title>KOMPEC | Software & Computer Maintenance</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body class="custom-bg custom-text font-sans antialiased transition-colors duration-300">
 
-    <!-- 1. الهيدر (القائمة الكاملة) -->
     <header class="sticky top-0 z-50 custom-bg/90 backdrop-blur-md border-b custom-border transition-colors duration-300">
         <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="index.html" class="flex items-center space-x-3 space-x-reverse">
+            <a href="index-en.html" class="flex items-center space-x-3 group">
                 <img src="images/logo.png" alt="KOMPEC Logo" class="w-10 h-10 object-contain shadow-[0_0_15px_rgba(37,99,235,0.3)]">
-                <span class="text-xl font-black tracking-widest mr-2 custom-text bg-clip-text">KOMPEC</span>
+                <span class="text-xl font-black tracking-widest ml-2 custom-text bg-clip-text">KOMPEC</span>
             </a>
             
-            <nav class="hidden md:flex items-center space-x-8 space-x-reverse text-sm font-medium">
-                <a href="#hero" class="custom-text border-b-2 border-[#2563eb] pb-1 font-bold">الرئيسية</a>
-                <a href="#services" class="custom-muted hover:text-[#2563eb] transition-colors duration-200">خدمات الصيانة</a>
-                <a href="products.html" class="custom-muted hover:text-[#2563eb] transition-colors duration-200">منتجاتنا</a>
-                <a href="#why-us" class="custom-muted hover:text-[#2563eb] transition-colors duration-200">لماذا نحن؟</a>
+            <nav class="hidden md:flex items-center space-x-8 text-sm font-medium">
+                <a href="#hero" class="custom-text border-b-2 border-[#2563eb] pb-1 font-bold">Home</a>
+                <a href="#services" class="custom-muted hover:text-[#2563eb] transition-colors duration-200">Maintenance Services</a>
+                <a href="products-en.html" class="custom-muted hover:text-[#2563eb] transition-colors duration-200">Our Products</a>
+                <a href="#why-us" class="custom-muted hover:text-[#2563eb] transition-colors duration-200">Why Us?</a>
                 
                 <button id="theme-toggle" class="p-2 rounded-xl bg-gray-800 text-yellow-400 hover:bg-gray-700 transition">
-                       <span id="theme-toggle-icon">☀️</span>
+                    <span id="theme-toggle-icon">☀️</span>
                 </button>
 
-                <a href="index-en.html" class="p-2 rounded-xl bg-gray-800 text-white hover:bg-gray-700 transition font-bold text-xs flex items-center justify-center">
-                    EN
+                <a href="index.html" class="p-2 rounded-xl bg-gray-800 text-white hover:bg-gray-700 transition font-bold text-xs flex items-center justify-center">
+                    AR
                 </a>
                 
                 <a href="#contact" class="custom-card border custom-border hover:border-[#2563eb] px-4 py-2 rounded-xl text-xs font-bold transition-all shadow-md">
-                    تواصل معنا
+                    Contact Us
                 </a>
             </nav>
         </div>
     </header>
 
-    <!-- 2. القسم الرئيسي (Hero Section) -->
     <section id="hero" class="relative min-h-[85vh] flex items-center justify-center px-6 overflow-hidden">
         <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-[#2563eb]/10 rounded-full blur-[120px]"></div>
         <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-[#06b6d4]/10 rounded-full blur-[120px]"></div>
 
         <div class="text-center max-w-3xl relative z-10">
             <h1 class="text-4xl md:text-6xl font-extrabold mb-6 leading-tight custom-text">
-                نأخذ أعمالك وأجهزتك إلى <br>
-                <span class="bg-clip-text text-transparent bg-gradient-to-r from-[#2563eb] to-[#06b6d4]">مستوى الاحتراف الرقمي</span>
+                We take your business and devices to the <br>
+                <span class="bg-clip-text text-transparent bg-gradient-to-r from-[#2563eb] to-[#06b6d4]">level of digital professionalism</span>
             </h1>
             <p class="custom-muted text-lg md:text-xl mb-10 leading-relaxed max-w-2xl mx-auto">
-                في <span class="font-bold custom-text">KOMPEC</span>، نمزج بين دقة هندسة الصيانة العتادية وابتكار البرمجيات لنمنحك حلولاً تكنولوجية متكاملة وموثوقة.
+                At <span class="font-bold custom-text">KOMPEC</span>, we blend the precision of hardware maintenance engineering with software innovation to provide you with comprehensive and reliable technological solutions.
             </p>
             <div class="flex flex-col sm:flex-row justify-center gap-4">
                 <a href="#contact" class="bg-gradient-to-r from-[#2563eb] to-blue-600 text-white font-bold px-8 py-4 rounded-xl shadow-lg shadow-blue-500/20 transform hover:-translate-y-0.5 transition-all text-center">
-                    ابدأ مشروعك معنا
+                    Start your project with us
                 </a>
-                <a href="products.html" class="custom-card border custom-border hover:border-gray-500 font-semibold px-8 py-4 rounded-xl transition-all text-center">
-                    استكشف منتجاتنا
+                <a href="products-en.html" class="custom-card border custom-border hover:border-gray-500 font-semibold px-8 py-4 rounded-xl transition-all text-center">
+                    Explore our products
                 </a>
             </div>
         </div>
     </section>
 
-    <!-- 3. قسم الخدمات (بالنصوص الأصلية الكاملة) -->
     <section id="services" class="py-20 custom-bg px-6 border-t custom-border transition-colors duration-300">
         <div class="container mx-auto max-w-6xl">
             <div class="text-center mb-16">
-                <h2 class="text-3xl font-bold mb-4 custom-text">خدماتنا الاحترافية</h2>
+                <h2 class="text-3xl font-bold mb-4 custom-text">Our Professional Services</h2>
                 <div class="w-12 h-1 bg-gradient-to-r from-[#2563eb] to-[#06b6d4] mx-auto rounded-full"></div>
             </div>
             
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <!-- خدمة 1 -->
                 <div class="custom-card p-8 rounded-2xl border custom-border hover:border-[#2563eb]/50 transition-all duration-300 group">
                     <div class="w-12 h-12 bg-[#2563eb]/10 rounded-xl flex items-center justify-center text-[#2563eb] mb-6 group-hover:bg-[#2563eb] group-hover:text-white transition-all">
                         <i class="fas fa-tools text-xl"></i>
                     </div>
-                    <h3 class="text-xl font-bold mb-4 custom-text">صيانة وتجهيز العتاد</h3>
+                    <h3 class="text-xl font-bold mb-4 custom-text">Hardware Maintenance & Assembly</h3>
                     <p class="custom-muted leading-relaxed text-sm">
-                        تشخيص هندسي دقيق للابتوب والكمبيوتر، حلول التبريد الاحترافية، ترقية العتاد، وتجميع أجهزة الألعاب والأعمال بضمان حقيقي.
+                        Accurate engineering diagnosis for laptops and computers, professional cooling solutions, hardware upgrades, and assembling gaming and business PCs with a real warranty.
                     </p>
                 </div>
 
-                <!-- خدمة 2 -->
                 <div class="custom-card p-8 rounded-2xl border custom-border hover:border-[#06b6d4]/50 transition-all duration-300 group">
                     <div class="w-12 h-12 bg-[#06b6d4]/10 rounded-xl flex items-center justify-center text-[#06b6d4] mb-6 group-hover:bg-[#06b6d4] group-hover:text-white transition-all">
                         <i class="fas fa-shopping-bag text-xl"></i>
                     </div>
-                    <h3 class="text-xl font-bold mb-4 custom-text">ملحقات وإكسسوارات رقمية</h3>
+                    <h3 class="text-xl font-bold mb-4 custom-text">Digital Accessories & Peripherals</h3>
                     <p class="custom-muted leading-relaxed text-sm">
-                        توفير إكسسوارات حاسوب أصلية ومختبرة بعناية؛ من كابلات الشبكات المعتمدة، وحدات التخزين فائقة السرعة، وحتى أدوات الإنتاجية.
+                        Providing original and carefully tested computer accessories; from certified network cables, ultra-fast storage units, to productivity tools.
                     </p>
                 </div>
 
-                <!-- خدمة 3 -->
                 <div class="custom-card p-8 rounded-2xl border-2 border-[#2563eb] hover:border-[#06b6d4] transition-all duration-300 shadow-xl relative overflow-hidden group">
-                    <span class="absolute top-0 left-0 bg-gradient-to-r from-[#2563eb] to-[#06b6d4] text-white text-[10px] font-bold tracking-widest px-3 py-1 rounded-br-lg">متميز</span>
+                    <span class="absolute top-0 right-0 bg-gradient-to-l from-[#2563eb] to-[#06b6d4] text-white text-[10px] font-bold tracking-widest px-3 py-1 rounded-bl-lg">Featured</span>
                     <div class="w-12 h-12 bg-gradient-to-r from-[#2563eb] to-[#06b6d4] text-white rounded-xl flex items-center justify-center mb-6 shadow-md">
                         <i class="fas fa-code text-xl"></i>
                     </div>
-                    <h3 class="text-xl font-bold mb-4 custom-text">تطوير وتصميم الويب</h3>
+                    <h3 class="text-xl font-bold mb-4 custom-text">Web Development & Design</h3>
                     <p class="custom-muted leading-relaxed text-sm">
-                        نصمم ونبني مواقع ويب متجاوبة بالكامل، صفحات هبوط تسويقية جذابة، وأنظمة ويب متكاملة مبنية بأحدث معايير الأكواد العالمية.
+                        We design and build fully responsive websites, attractive marketing landing pages, and integrated web systems built with the latest global coding standards.
                     </p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 4. قسم لماذا نحن (بالنصوص الأصلية الكاملة) -->
     <section id="why-us" class="py-20 custom-bg px-6 border-t custom-border transition-colors duration-300 relative overflow-hidden">
         <div class="container mx-auto max-w-5xl relative z-10">
             <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
                 <div>
-                    <h2 class="text-3xl font-bold mb-6 custom-text">الخبرة الأكاديمية تلتقي بالتطبيق العملي</h2>
+                    <h2 class="text-3xl font-bold mb-6 custom-text">Academic Expertise Meets Practical Application</h2>
                     <p class="custom-muted mb-8 leading-relaxed">
-                        في السوق الكثير من الهواة، ولكن في <span class="font-bold">KOMPEC</span> نطبق معايير علوم الحاسوب والمعلوماتية لضمان أمان بياناتك، وسرعة استجابة برمجياتك، والعمر الطويل لأجهزتك.
+                        There are many amateurs in the market, but at <span class="font-bold">KOMPEC</span> we apply the standards of computer science and informatics to ensure the security of your data, the fast response of your software, and the long lifespan of your devices.
                     </p>
                     <ul class="space-y-4 text-sm">
                         <li class="flex items-center">
-                            <span class="text-[#06b6d4] ml-3 font-bold text-lg">✦</span>
-                            <span class="custom-muted">حلول برمجية متقدمة ولغات ويب متطورة وتفاعلية.</span>
+                            <span class="text-[#06b6d4] mr-3 font-bold text-lg">✦</span>
+                            <span class="custom-muted">Advanced software solutions and interactive web languages.</span>
                         </li>
                         <li class="flex items-center">
-                            <span class="text-[#2563eb] ml-3 font-bold text-lg">✦</span>
-                            <span class="custom-muted">مواقع متوافقة هندسياً مع الهواتف ومحركات البحث.</span>
+                            <span class="text-[#2563eb] mr-3 font-bold text-lg">✦</span>
+                            <span class="custom-muted">Websites structurally optimized for mobile devices and search engines.</span>
                         </li>
                         <li class="flex items-center">
-                            <span class="text-[#06b6d4] ml-3 font-bold text-lg">✦</span>
-                            <span class="custom-muted">احترام خصوصية الزبائن وضمان سرية البيانات.</span>
+                            <span class="text-[#06b6d4] mr-3 font-bold text-lg">✦</span>
+                            <span class="custom-muted">Respecting customer privacy and ensuring data confidentiality.</span>
                         </li>
                     </ul>
                 </div>
                 
                 <div class="custom-card p-8 rounded-2xl border custom-border text-center shadow-2xl transition-colors duration-300">
                     <div class="text-5xl font-black bg-clip-text text-transparent bg-gradient-to-r from-[#2563eb] to-[#06b6d4] mb-2">100%</div>
-                    <div class="font-bold mb-2 custom-text">حلول مدعومة بالأسس الهندسية</div>
-                    <div class="custom-muted text-xs leading-relaxed">كل صيانة وكل سطر برميجي يخرج من مركزنا يتم فحصه واختباره لضمان أعلى أداء وكفاءة.</div>
+                    <div class="font-bold mb-2 custom-text">Solutions Backed by Engineering Foundations</div>
+                    <div class="custom-muted text-xs leading-relaxed">Every maintenance task and every line of code that leaves our center is checked and tested to ensure the highest performance and efficiency.</div>
                 </div>
             </div>
         </div>
     </section>
 
-        <!-- 5. قسم اتصل بنا -->
     <section id="contact" class="py-20 custom-bg px-6 border-t custom-border transition-colors duration-300">
         <div class="container mx-auto max-w-5xl text-center">
-            <h2 class="text-3xl font-bold mb-4 custom-text">تواصل معنا عبر منصاتنا الرقمية</h2>
-            <p class="custom-muted mb-12 max-w-xl mx-auto">تواصل معنا مباشرة للاستفسار عن خدمات الصيانة البرمجية والعتادية، أو لمتابعة أحدث الإكسسوارات المتوفرة في مركزنا.</p>
+            <h2 class="text-3xl font-bold mb-4 custom-text">Connect With Us Via Our Digital Platforms</h2>
+            <p class="custom-muted mb-12 max-w-xl mx-auto">Contact us directly to inquire about software and hardware maintenance services, or to follow up on the latest accessories available in our center.</p>
             
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-                
                 <div class="custom-card p-6 rounded-2xl border custom-border flex flex-col items-center justify-between group hover:border-emerald-500 hover:shadow-[0_0_25px_rgba(16,185,129,0.15)] transition-all duration-300">
                     <div class="mb-4 flex flex-col items-center">
                         <i class="fab fa-whatsapp text-4xl text-emerald-500 group-hover:scale-110 transition-transform duration-300"></i>
-                        <h3 class="font-bold mt-3 custom-text">واتساب (WhatsApp)</h3>
+                        <h3 class="font-bold mt-3 custom-text">WhatsApp</h3>
                         <a href="https://wa.me/963991856359" target="_blank" class="text-xs text-emerald-400 hover:underline block mt-1">0991856359</a>
                     </div>
                     <div class="w-32 h-32 bg-gray-900 rounded-xl p-2 mb-4 flex items-center justify-center border custom-border">
                         <img src="images/qr-whatsapp.png" alt="WhatsApp QR" class="w-full h-full object-contain">
                     </div>
                     <a href="https://wa.me/963991856359" target="_blank" class="w-full bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-bold py-2.5 px-4 rounded-xl transition shadow-md shadow-emerald-900/20">
-                        مراسلة فورية
+                        Instant Messaging
                     </a>
                 </div>
 
                 <div class="custom-card p-6 rounded-2xl border custom-border flex flex-col items-center justify-between group hover:border-blue-600 hover:shadow-[0_0_25px_rgba(37,99,235,0.15)] transition-all duration-300">
                     <div class="mb-4 flex flex-col items-center">
                         <i class="fab fa-facebook text-4xl text-blue-500 group-hover:scale-110 transition-transform duration-300"></i>
-                        <h3 class="font-bold mt-3 custom-text">فيسبوك (Facebook)</h3>
-                        <a href="#" target="_blank" class="text-xs text-blue-400 hover:underline block mt-1">صفحتنا الرسمية</a>
+                        <h3 class="font-bold mt-3 custom-text">Facebook</h3>
+                        <a href="#" target="_blank" class="text-xs text-blue-400 hover:underline block mt-1">Our Official Page</a>
                     </div>
                     <div class="w-32 h-32 bg-gray-900 rounded-xl p-2 mb-4 flex items-center justify-center border custom-border">
                         <img src="images/qr-facebook.png" alt="Facebook QR" class="w-full h-full object-contain">
                     </div>
                     <a href="#" target="_blank" class="w-full bg-blue-600 hover:bg-blue-500 text-white text-xs font-bold py-2.5 px-4 rounded-xl transition shadow-md shadow-blue-900/20">
-                        زيارة الصفحة
+                        Visit Page
                     </a>
                 </div>
 
                 <div class="custom-card p-6 rounded-2xl border custom-border flex flex-col items-center justify-between group hover:border-pink-500 hover:shadow-[0_0_25px_rgba(236,72,153,0.15)] transition-all duration-300">
                     <div class="mb-4 flex flex-col items-center">
                         <i class="fab fa-instagram text-4xl text-transparent bg-clip-text bg-gradient-to-tr from-yellow-500 via-pink-500 to-purple-500 group-hover:scale-110 transition-transform duration-300"></i>
-                        <h3 class="font-bold mt-3 custom-text">إنستغرام (Instagram)</h3>
+                        <h3 class="font-bold mt-3 custom-text">Instagram</h3>
                         <a href="#" target="_blank" class="text-xs text-pink-400 hover:underline block mt-1">@KOMPEC_STORE</a>
                     </div>
                     <div class="w-32 h-32 bg-gray-900 rounded-xl p-2 mb-4 flex items-center justify-center border custom-border">
                         <img src="images/qr-instagram.png" alt="Instagram QR" class="w-full h-full object-contain">
                     </div>
                     <a href="#" target="_blank" class="w-full bg-gradient-to-r from-pink-600 to-purple-600 text-white text-xs font-bold py-2.5 px-4 rounded-xl transition shadow-md shadow-pink-900/20">
-                        متابعة الحساب
+                        Follow Account
                     </a>
                 </div>
-
             </div>
         </div>
     </section>
 
-    <!-- سكربت التبديل -->
     <script>
         const toggleBtn = document.getElementById('theme-toggle');
         const toggleIcon = document.getElementById('theme-toggle-icon');
