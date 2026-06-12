@@ -42,6 +42,10 @@
                 <a href="index.html#contact" class="bg-[#1a1a1e] border border-gray-700 hover:border-[#2563eb] text-white px-4 py-2 rounded-xl transition-all duration-300 text-xs font-bold shadow-md">
                     تواصل معنا
                 </a>
+                <!-- زر تبديل الوضع (ليلي / نهاري) -->
+                <button id="theme-toggle" class="p-2 rounded-xl bg-gray-800 text-yellow-400 hover:text-white transition">
+                    <span id="theme-toggle-icon">☀️</span>
+                </button>
             </nav>
 
             <div class="md:hidden">
@@ -145,6 +149,25 @@
     <footer class="bg-black/40 py-8 text-center text-gray-600 text-xs border-t border-gray-900/60">
         <p>© 2026 KOMPEC. جميع الحقوق محفوظة.</p>
     </footer>
+    <script>
+        const toggleBtn = document.getElementById('theme-toggle');
+        const toggleIcon = document.getElementById('theme-toggle-icon');
+        
+        toggleBtn.addEventListener('click', () => {
+            document.body.classList.toggle('bg-white');
+            document.body.classList.toggle('text-gray-900');
+            document.body.classList.toggle('bg-[#121214]');
+            document.body.classList.toggle('text-gray-300');
+            
+            if(document.body.classList.contains('bg-white')) {
+                toggleIcon.innerText = '🌙';
+                toggleBtn.classList.replace('bg-gray-800', 'bg-gray-100');
+            } else {
+                toggleIcon.innerText = '☀️';
+                toggleBtn.classList.replace('bg-gray-100', 'bg-gray-800');
+            }
+        });
+    </script>
 
 </body>
 </html>
