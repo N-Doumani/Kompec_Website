@@ -4,58 +4,59 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KOMPEC | للبرمجيات وصيانة الكمبيوتر</title>
-    <!-- استدعاء مكتبة Tailwind CSS للتصميم الاحترافي والسريع -->
+    <!-- استدعاء مكتبة Tailwind CSS للتصميم الاحترافي -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
-                        brandDark: '#111827', // لون الألكوبوند الداكن
-                        brandCard: '#1f2937', // لون بطاقات الخدمات
-                        brandAccent: '#3b82f6', // اللون الأزرق المضيء للشعار
+                        // تخصيص الألوان بناءً على الهوية الفعلية للمحل واللافتة
+                        compDarkBg: '#1c1c1e',      // الرمادي الغامق (خلفية اللافتة والموقع)
+                        compDarkCard: '#2c2c2e',    // رمادي متوسط لبطاقات الخدمات ليعطي بعداً ثلاثياً
+                        compLightGray: '#d1d5db',   // الرمادي الفاتح (لون الشعار، الرفوف والمكتب)
                     }
                 }
             }
         }
     </script>
 </head>
-<body class="bg-brandDark text-gray-100 font-sans antialiased">
+<body class="bg-compDarkBg text-compLightGray font-sans antialiased">
 
     <!-- 1. الهيدر (Header) -->
-    <header class="sticky top-0 z-50 bg-brandDark/90 backdrop-blur-md border-b border-gray-800">
+    <header class="sticky top-0 z-50 bg-compDarkBg/95 backdrop-blur-md border-b border-gray-800">
         <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <!-- الشعار والاسم مستوحى من لافتة المحل -->
+            <!-- الشعار والاسم متطابق تماماً مع لافتة الألكوبوند -->
             <div class="flex items-center space-x-3 space-x-reverse">
-                <div class="w-10 h-10 rounded-full border-2 border-brandAccent flex items-center justify-center font-bold text-brandAccent text-lg tracking-wider">
+                <div class="w-10 h-10 rounded-full border-2 border-compLightGray flex items-center justify-center font-bold text-white text-lg tracking-wider">
                     KP
                 </div>
                 <span class="text-xl font-black tracking-widest text-white mr-2">KOMPEC</span>
             </div>
-            <!-- قائمة التنقل -->
-            <nav class="hidden md:flex space-x-8 space-x-reverse text-sm font-medium text-gray-300">
-                <a href="#hero" class="hover:text-brandAccent transition">الرئيسية</a>
-                <a href="#services" class="hover:text-brandAccent transition">خدماتنا</a>
-                <a href="#why-us" class="hover:text-brandAccent transition">لماذا نحن؟</a>
-                <a href="#contact" class="hover:text-brandAccent transition">تواصل معنا</a>
+            <!-- قائمة التنقل باللون الرمادي الفاتح وتتحول للأبيض عند مرور الماوس -->
+            <nav class="hidden md:flex space-x-8 space-x-reverse text-sm font-medium text-compLightGray">
+                <a href="#hero" class="hover:text-white transition">الرئيسية</a>
+                <a href="#services" class="hover:text-white transition">خدماتنا</a>
+                <a href="#why-us" class="hover:text-white transition">لماذا نحن؟</a>
+                <a href="#contact" class="hover:text-white transition">تواصل معنا</a>
             </nav>
         </div>
     </header>
 
     <!-- 2. القسم الرئيسي (Hero Section) -->
-    <section id="hero" class="min-h-[80vh] flex items-center justify-center bg-gradient-to-b from-brandDark to-gray-900 px-6">
+    <section id="hero" class="min-h-[80vh] flex items-center justify-center px-6">
         <div class="text-center max-w-3xl">
             <h1 class="text-4xl md:text-6xl font-extrabold text-white mb-6 leading-tight">
-                نأخذ أعمالك وأجهزتك إلى <span class="text-brandAccent">مستوى الاحتراف</span>
+                نأخذ أعمالك وأجهزتك إلى <span class="text-compLightGray border-b-2 border-compLightGray">مستوى الاحتراف</span>
             </h1>
             <p class="text-gray-400 text-lg md:text-xl mb-8 leading-relaxed">
                 في <span class="text-white font-bold">KOMPEC</span>، نقدم حلولاً متكاملة تشمل صيانة العتاد الاحترافية، وتطوير برمجيات ومواقع ويب مخصصة لتلبي طموحاتك وتدعم نجاح مشروعك.
             </p>
             <div class="flex flex-col sm:flex-row justify-center gap-4">
-                <a href="#contact" class="bg-brandAccent hover:bg-blue-600 text-white font-semibold px-8 py-4 rounded-xl shadow-lg shadow-blue-500/20 transition-all transform hover:-translate-y-0.5 text-center">
+                <a href="#contact" class="bg-white hover:bg-compLightGray text-compDarkBg font-bold px-8 py-4 rounded-xl shadow-lg transition-all transform hover:-translate-y-0.5 text-center">
                     ابدأ مشروعك معنا
                 </a>
-                <a href="#services" class="border border-gray-700 hover:border-gray-500 text-gray-300 font-semibold px-8 py-4 rounded-xl transition text-center">
+                <a href="#services" class="border border-gray-700 hover:border-compLightGray text-compLightGray font-semibold px-8 py-4 rounded-xl transition text-center">
                     استكشف خدماتنا
                 </a>
             </div>
@@ -63,50 +64,50 @@
     </section>
 
     <!-- 3. قسم الخدمات (Services Section) -->
-    <section id="services" class="py-20 bg-brandDark px-6">
+    <section id="services" class="py-20 bg-compDarkBg px-6 border-t border-gray-800">
         <div class="container mx-auto max-w-6xl">
             <div class="text-center mb-16">
                 <h2 class="text-3xl font-bold text-white mb-4">خدماتنا الاحترافية</h2>
-                <div class="w-16 h-1 bg-brandAccent mx-auto rounded"></div>
+                <div class="w-16 h-1 bg-compLightGray mx-auto rounded"></div>
             </div>
             
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <!-- بطاقة صيانة الكمبيوتر -->
-                <div class="bg-brandCard p-8 rounded-2xl border border-gray-800 hover:border-brandAccent/50 transition-all duration-300 group">
-                    <div class="w-12 h-12 bg-blue-500/10 rounded-xl flex items-center justify-center text-brandAccent mb-6 group-hover:scale-110 transition">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 20 20" stroke="currentColor" stroke-width="2">
+                <div class="bg-compDarkCard p-8 rounded-2xl border border-gray-700 hover:border-white transition-all duration-300 group">
+                    <div class="w-12 h-12 bg-white/5 rounded-xl flex items-center justify-center text-white mb-6 group-hover:scale-110 transition">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M9 3v2m6-2v2M9 19v-2m6-2v2M5 9H3m2 6H3m14-6h2m-2 6h2M5 5a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2H5z" />
                         </svg>
                     </div>
                     <h3 class="text-xl font-bold text-white mb-4">صيانة وتجهيز العتاد</h3>
-                    <p class="text-gray-400 leading-relaxed text-sm">
+                    <p class="text-compLightGray leading-relaxed text-sm">
                         صيانة احترافية للابتوب والكمبيوتر، حل مشاكل الحرارة، ترقية المكونات، وتجميع أجهزة الجيمنج والمكتب بضمان موثوق.
                     </p>
                 </div>
 
                 <!-- بطاقة بيع الإكسسوارات -->
-                <div class="bg-brandCard p-8 rounded-2xl border border-gray-800 hover:border-brandAccent/50 transition-all duration-300 group">
-                    <div class="w-12 h-12 bg-blue-500/10 rounded-xl flex items-center justify-center text-brandAccent mb-6 group-hover:scale-110 transition">
+                <div class="bg-compDarkCard p-8 rounded-2xl border border-gray-700 hover:border-white transition-all duration-300 group">
+                    <div class="w-12 h-12 bg-white/5 rounded-xl flex items-center justify-center text-white mb-6 group-hover:scale-110 transition">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
                         </svg>
                     </div>
                     <h3 class="text-xl font-bold text-white mb-4">إكسسوارات وملحقات رقمية</h3>
-                    <p class="text-gray-400 leading-relaxed text-sm">
+                    <p class="text-compLightGray leading-relaxed text-sm">
                         توفير أفضل ملحقات الحاسوب الأصلية، من كابلات شبكات، وحدات تخزين سريعة، وأدوات تدعم إنتاجيتك اليومية.
                     </p>
                 </div>
 
                 <!-- بطاقة تصميم المواقع -->
-                <div class="bg-brandCard p-8 rounded-2xl border border-brandAccent hover:border-brandAccent transition-all duration-300 shadow-xl shadow-blue-500/5 group relative overflow-hidden">
-                    <span class="absolute top-0 left-0 bg-brandAccent text-white text-[10px] uppercase font-bold tracking-widest px-3 py-1 rounded-br-lg">متميز</span>
-                    <div class="w-12 h-12 bg-blue-500/10 rounded-xl flex items-center justify-center text-brandAccent mb-6 group-hover:scale-110 transition">
+                <div class="bg-compDarkCard p-8 rounded-2xl border-2 border-compLightGray hover:border-white transition-all duration-300 shadow-xl group relative overflow-hidden">
+                    <span class="absolute top-0 left-0 bg-white text-compDarkBg text-[10px] font-bold tracking-widest px-3 py-1 rounded-br-lg">متميز</span>
+                    <div class="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center text-white mb-6 group-hover:scale-110 transition">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
                         </svg>
                     </div>
                     <h3 class="text-xl font-bold text-white mb-4">تطوير وتصميم الويب</h3>
-                    <p class="text-gray-400 leading-relaxed text-sm">
+                    <p class="text-compLightGray leading-relaxed text-sm">
                         نصمم ونبني مواقع ويب متجاوبة، صفحات هبوط جذابة، وتطبيقات ويب مخصصة باستخدام أحدث التقنيات لتعزيز تواجدك الرقمي.
                     </p>
                 </div>
@@ -115,7 +116,7 @@
     </section>
 
     <!-- 4. قسم لماذا نحن (Why Us) -->
-    <section id="why-us" class="py-20 bg-gray-900/50 px-6 border-t border-gray-850">
+    <section id="why-us" class="py-20 bg-compDarkBg px-6 border-t border-gray-800">
         <div class="container mx-auto max-w-5xl">
             <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
                 <div>
@@ -125,38 +126,37 @@
                     </p>
                     <ul class="space-y-4">
                         <li class="flex items-start">
-                            <span class="text-brandAccent ml-3 mt-1">✔</span>
-                            <span class="text-gray-300">دقة هندسية في تشخيص الأعطال البرمجية والعتادية.</span>
+                            <span class="text-white ml-3 mt-1">✔</span>
+                            <span class="text-compLightGray">دقة هندسية في تشخيص الأعطال البرمجية والعتادية.</span>
                         </li>
                         <li class="flex items-start">
-                            <span class="text-brandAccent ml-3 mt-1">✔</span>
-                            <span class="text-gray-300">مواقع ويب متوافقة بالكامل مع شاشات الموبايل والتابلت.</span>
+                            <span class="text-white ml-3 mt-1">✔</span>
+                            <span class="text-compLightGray">مواقع ويب متوافقة بالكامل مع شاشات الموبايل والتابلت.</span>
                         </li>
                         <li class="flex items-start">
-                            <span class="text-brandAccent ml-3 mt-1">✔</span>
-                            <span class="text-gray-300">التزام تام بحماية خصوصية البيانات وسرية ملفات الزبائن.</span>
+                            <span class="text-white ml-3 mt-1">✔</span>
+                            <span class="text-compLightGray">التزام تام بحماية خصوصية البيانات وسرية ملفات الزبائن.</span>
                         </li>
                     </ul>
                 </div>
-                <!-- تصميم تكنولوجي جانبي رمزي -->
-                <div class="bg-gradient-to-br from-brandCard to-gray-800 p-8 rounded-2xl border border-gray-700 text-center shadow-2xl">
-                    <div class="text-5xl font-black text-brandAccent mb-2">100%</div>
+                <!-- تصميم يعكس ألوان الأثاث والجدران والمكتب -->
+                <div class="bg-compDarkCard p-8 rounded-2xl border border-gray-700 text-center shadow-2xl">
+                    <div class="text-5xl font-black text-white mb-2">100%</div>
                     <div class="text-gray-200 font-bold mb-2">حلول مدعومة بالخبرة الأكاديمية</div>
-                    <div class="text-gray-400 text-sm">نطبق معايير علوم الحاسوب والمعلوماتية في كل مشروع نقوم به.</div>
+                    <div class="text-compLightGray text-sm">نطبق معايير علوم الحاسوب والمعلوماتية في كل مشروع نقوم به.</div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- 5. قسم اتصل بنا (Contact Section) -->
-    <section id="contact" class="py-20 bg-brandDark px-6">
+    <section id="contact" class="py-20 bg-compDarkBg px-6 border-t border-gray-800">
         <div class="container mx-auto max-w-3xl text-center">
             <h2 class="text-3xl font-bold text-white mb-4">هل أنت جاهز لتطوير فكرتك؟</h2>
-            <p class="text-gray-400 mb-8">اضغط على الزر أدناه لتتواصل معنا مباشرة عبر الواتساب ومناقشة تفاصيل مشروعك أو صيانة جهازك.</p>
+            <p class="text-compLightGray mb-8">اضغط على الزر أدناه لتتواصل معنا مباشرة عبر الواتساب ومناقشة تفاصيل مشروعك أو صيانة جهازك.</p>
             
-            <!-- زر يربط مباشرة برقم موبايل المحل المذكور في اللافتة -->
-            <a href="https://wa.me/963991856359" target="_blank" class="inline-flex items-center space-x-3 space-x-reverse bg-emerald-600 hover:bg-emerald-500 text-white font-bold px-8 py-4 rounded-xl shadow-lg shadow-emerald-600/20 transition transform hover:-translate-y-0.5">
-                <!-- أيقونة واتساب مبسطة -->
+            <!-- زر اتصال متباين ومحترف ومتناسق مع التصميم المونوكروم اللطيف -->
+            <a href="https://wa.me/963991856359" target="_blank" class="inline-flex items-center space-x-3 space-x-reverse bg-white hover:bg-compLightGray text-compDarkBg font-bold px-8 py-4 rounded-xl shadow-lg transition transform hover:-translate-y-0.5">
                 <svg class="h-6 w-6 fill-current" viewBox="0 0 24 24">
                     <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.513 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.713-1.457L0 24zm6.59-4.846c1.6.95 3.498 1.451 5.438 1.453 5.494 0 9.961-4.47 9.964-9.97.002-2.665-1.026-5.17-2.894-7.04-1.869-1.87-4.357-2.9-7.027-2.91-5.498 0-9.964 4.471-9.967 9.97-.001 1.914.499 3.789 1.447 5.41l-.995 3.637 3.734-.98z"/>
                 </svg>
@@ -166,7 +166,7 @@
     </section>
 
     <!-- 6. الفوتير (Footer) -->
-    <footer class="bg-gray-950 py-8 text-center text-gray-500 text-xs border-t border-gray-900">
+    <footer class="bg-black py-8 text-center text-gray-600 text-xs">
         <p>© 2026 KOMPEC. جميع الحقوق محفوظة.</p>
     </footer>
 
