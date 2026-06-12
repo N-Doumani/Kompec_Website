@@ -21,4 +21,16 @@ body.light {
 .custom-card { background-color: var(--bg-card) !important; }
 .custom-text { color: var(--text-main) !important; }
 .custom-muted { color: var(--text-muted) !important; }
-.custom-border { border-color: var(--border-color) !important; }
+.custom-border { border-color: var(--border-color) !important; }    
+/* تأثير الظهور التدريجي عند التمرير */
+.reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: cubic-bezier(0.4, 0, 0.2, 1) 0.8s;
+}
+
+/* الكلاس الذي ستضيفه الجافا سكريبت تلقائياً عند النزول */
+.reveal.show {
+    opacity: 1;
+    transform: translateY(0);
+}

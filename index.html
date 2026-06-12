@@ -40,7 +40,7 @@
     </header>
 
     <!-- 2. القسم الرئيسي (Hero Section) -->
-    <section id="hero" class="relative min-h-[85vh] flex items-center justify-center px-6 overflow-hidden">
+    <section id="hero" class="relative min-h-[85vh] flex items-center justify-center px-6 overflow-hidden reveal">
         <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-[#2563eb]/10 rounded-full blur-[120px]"></div>
         <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-[#06b6d4]/10 rounded-full blur-[120px]"></div>
 
@@ -64,7 +64,7 @@
     </section>
 
     <!-- 3. قسم الخدمات (بالنصوص الأصلية الكاملة) -->
-    <section id="services" class="py-20 custom-bg px-6 border-t custom-border transition-colors duration-300">
+    <section id="services" class="py-20 custom-bg px-6 border-t custom-border transition-colors duration-350 reveal">
         <div class="container mx-auto max-w-6xl">
             <div class="text-center mb-16">
                 <h2 class="text-3xl font-bold mb-4 custom-text">خدماتنا الاحترافية</h2>
@@ -110,7 +110,7 @@
     </section>
 
     <!-- 4. قسم لماذا نحن (بالنصوص الأصلية الكاملة) -->
-    <section id="why-us" class="py-20 custom-bg px-6 border-t custom-border transition-colors duration-300 relative overflow-hidden">
+    <section id="why-us" class="py-20 custom-bg px-6 border-t custom-border transition-colors duration-300 relative overflow-hidden reveal">
         <div class="container mx-auto max-w-5xl relative z-10">
             <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
                 <div>
@@ -144,7 +144,7 @@
     </section>
 
         <!-- 5. قسم اتصل بنا -->
-    <section id="contact" class="py-20 custom-bg px-6 border-t custom-border transition-colors duration-300">
+    <section id="contact" class="py-20 custom-bg px-6 border-t custom-border transition-colors duration-300 reveal">
         <div class="container mx-auto max-w-5xl text-center">
             <h2 class="text-3xl font-bold mb-4 custom-text">تواصل معنا عبر منصاتنا الرقمية</h2>
             <p class="custom-muted mb-12 max-w-xl mx-auto">تواصل معنا مباشرة للاستفسار عن خدمات الصيانة البرمجية والعتادية، أو لمتابعة أحدث الإكسسوارات المتوفرة في مركزنا.</p>
@@ -198,25 +198,6 @@
     </section>
 
     <!-- سكربت التبديل -->
-    <script>
-        const toggleBtn = document.getElementById('theme-toggle');
-        const toggleIcon = document.getElementById('theme-toggle-icon');
-        
-        if (localStorage.getItem('theme') === 'light') {
-            document.body.classList.add('light');
-            toggleIcon.innerText = '🌙';
-        }
-
-        toggleBtn.addEventListener('click', () => {
-            document.body.classList.toggle('light');
-            if (document.body.classList.contains('light')) {
-                toggleIcon.innerText = '🌙';
-                localStorage.setItem('theme', 'light');
-            } else {
-                toggleIcon.innerText = '☀️';
-                localStorage.setItem('theme', 'dark');
-            }
-        });
-    </script>
+   <script src="script.js"></script>
 </body>
 </html>

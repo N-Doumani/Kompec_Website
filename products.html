@@ -62,25 +62,6 @@
         </section>
     </main>
 
-    <script>
-        const toggleBtn = document.getElementById('theme-toggle');
-        const toggleIcon = document.getElementById('theme-toggle-icon');
-        
-        if (localStorage.getItem('theme') === 'light') {
-            document.body.classList.add('light');
-            toggleIcon.innerText = '🌙';
-        }
-
-        toggleBtn.addEventListener('click', () => {
-            document.body.classList.toggle('light');
-            if (document.body.classList.contains('light')) {
-                toggleIcon.innerText = '🌙';
-                localStorage.setItem('theme', 'light');
-            } else {
-                toggleIcon.innerText = '☀️';
-                localStorage.setItem('theme', 'dark');
-            }
-        });
-    </script>
+   <script src="script.js"></script>
 </body>
 </html>
