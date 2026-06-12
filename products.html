@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>منتجات KOMPEC | التميز في الإكسسوارات</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        compBaseBg: '#121214',
+                        compObjCard: '#1a1a1e',
+                        compLightGray: '#e5e7eb',
+                        compNeonBlue: '#2563eb',
+                        compCyberCyan: '#06b6d4',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-compBaseBg text-gray-300 font-sans antialiased">
+<header class="sticky top-0 z-50 bg-[#121214]/80 backdrop-blur-md border-b border-gray-800/60">
+    <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+        
+        <a href="index.html" class="flex items-center space-x-3 space-x-reverse group">
+            <img src="images/logo.png" alt="KOMPEC Logo" class="w-10 h-10 object-contain shadow-[0_0_15px_rgba(37,99,235,0.3)] transition-all duration-300 group-hover:scale-105">
+            <span class="text-xl font-black tracking-widest text-white mr-2 bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-300">
+                KOMPEC
+            </span>
+        </a>
+
+        <nav class="hidden md:flex items-center space-x-8 space-x-reverse text-sm font-medium">
+            <a href="index.html" class="text-gray-400 hover:text-white transition-colors duration-200">الرئيسية</a>
+            <a href="index.html#services" class="text-gray-400 hover:text-white transition-colors duration-200">خدمات الصيانة</a>
+            <a href="products.html" class="text-white border-b-2 border-[#2563eb] pb-1 font-bold tracking-wide">منتجاتنا</a>
+            <a href="index.html#why-us" class="text-gray-400 hover:text-white transition-colors duration-200">لماذا نحن؟</a>
+            
+            <a href="index.html#contact" class="bg-[#1a1a1e] border border-gray-700 hover:border-[#2563eb] text-white px-4 py-2 rounded-xl transition-all duration-300 text-xs font-bold shadow-md">
+                تواصل معنا
+            </a>
+        </nav>
+
+        <div class="md:hidden">
+            <a href="products.html" class="text-xs bg-[#2563eb] text-white px-3 py-2 rounded-lg font-bold">
+                المنتجات 🖱
+            </a>
+        </div>
+
+    </div>
+</header>
+
+    <section class="py-12 text-center relative overflow-hidden">
+        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-80 h-80 bg-compNeonBlue/5 rounded-full blur-[100px]"></div>
+        <h1 class="text-3xl md:text-5xl font-black text-white mb-3 relative z-10">كتالوج الإكسسوارات والملحقات</h1>
+        <p class="text-gray-400 text-sm md:text-base relative z-10">تصفح أفضل العروض والقطع الأصلية المتوفرة في محلنا</p>
+    </section>
+
+    <main class="container mx-auto max-w-6xl px-6 pb-24 space-y-20">
+
+        <section id="mice">
+            <div class="flex items-center space-x-3 space-x-reverse mb-8 border-b border-gray-800 pb-3">
+                <span class="text-2xl text-compNeonBlue">🖱</span>
+                <h2 class="text-2xl font-bold text-white">ماوسات (Mice)</h2>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+                <div class="bg-compObjCard rounded-2xl border border-gray-800 overflow-hidden group hover:border-compNeonBlue/40 transition">
+                    <div class="h-44 bg-gray-900 flex items-center justify-center text-gray-600 text-xs">[ ضع صورة الماوس هنا ]</div>
+                    <div class="p-5">
+                        <h3 class="font-bold text-white mb-2 group-hover:text-compNeonBlue transition">ماوس جيمنج احترافي RGB</h3>
+                        <p class="text-gray-400 text-xs mb-4">حساسية تصل إلى 8000 DPI مع أزرار جانبية مبرمجة.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-white font-black text-sm">180,000 ل.س</span>
+                            <span class="text-[10px] bg-emerald-500/10 text-emerald-400 px-2 py-1 rounded">متوفر</span>
+                        </div>
+                    </div>
+                </div>
+                </div>
+        </section>
+
+        <section id="keyboards">
+            <div class="flex items-center space-x-3 space-x-reverse mb-8 border-b border-gray-800 pb-3">
+                <span class="text-2xl text-compCyberCyan">⌨</span>
+                <h2 class="text-2xl font-bold text-white">كيبوردات (Keyboards)</h2>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+                <div class="bg-compObjCard rounded-2xl border border-gray-800 overflow-hidden group hover:border-compCyberCyan/40 transition">
+                    <div class="h-44 bg-gray-900 flex items-center justify-center text-gray-600 text-xs">[ ضع صورة الكيبورد هنا ]</div>
+                    <div class="p-5">
+                        <h3 class="font-bold text-white mb-2 group-hover:text-compCyberCyan transition">كيبورد ميكانيكي سويتش أزرق</h3>
+                        <p class="text-gray-400 text-xs mb-4">لوحة مفاتيح ميكانيكية كاملة مقاومة للغبار مخصصة للكتابة والألعاب.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-white font-black text-sm">350,000 ل.س</span>
+                            <span class="text-[10px] bg-emerald-500/10 text-emerald-400 px-2 py-1 rounded">متوفر</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="headsets">
+            <div class="flex items-center space-x-3 space-x-reverse mb-8 border-b border-gray-800 pb-3">
+                <span class="text-2xl text-compNeonBlue">🎧</span>
+                <h2 class="text-2xl font-bold text-white">سماعات (Headsets)</h2>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+                <div class="bg-compObjCard rounded-2xl border border-gray-800 overflow-hidden group hover:border-compNeonBlue/40 transition">
+                    <div class="h-44 bg-gray-900 flex items-center justify-center text-gray-600 text-xs">[ ضع صورة السماعة هنا ]</div>
+                    <div class="p-5">
+                        <h3 class="font-bold text-white mb-2 group-hover:text-compNeonBlue transition">سماعة محيطية 7.1 مع مايك مدمج</h3>
+                        <p class="text-gray-400 text-xs mb-4">عزل صوت ممتاز مع وسادات مريحة للاستخدام الطويل.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-white font-black text-sm">290,000 ل.س</span>
+                            <span class="text-[10px] bg-emerald-500/10 text-emerald-400 px-2 py-1 rounded">متوفر</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="storage">
+            <div class="flex items-center space-x-3 space-x-reverse mb-8 border-b border-gray-800 pb-3">
+                <span class="text-2xl text-compCyberCyan">💾</span>
+                <h2 class="text-2xl font-bold text-white">فلاشات ووحدات تخزين (Storage)</h2>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+                <div class="bg-compObjCard rounded-2xl border border-gray-800 overflow-hidden group hover:border-compCyberCyan/40 transition">
+                    <div class="h-44 bg-gray-900 flex items-center justify-center text-gray-600 text-xs">[ ضع صورة الفلاشة هنا ]</div>
+                    <div class="p-5">
+                        <h3 class="font-bold text-white mb-2 group-hover:text-compCyberCyan transition">فلاشة 64 جيجابايت USB 3.2</h3>
+                        <p class="text-gray-400 text-xs mb-4">سرعة نقل بيانات فائقة وهيكل معدني متين ومقاوم للصدمات.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-white font-black text-sm">85,000 ل.س</span>
+                            <span class="text-[10px] bg-emerald-500/10 text-emerald-400 px-2 py-1 rounded">متوفر</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-black/40 py-8 text-center text-gray-600 text-xs border-t border-gray-900/60">
+        <p>© 2026 KOMPEC. جميع الحقوق محفوظة.</p>
+    </footer>
+
+</body>
+</html>
